@@ -1,0 +1,12 @@
+# Npm
+node_modules/
+npm-debug.log
+
+# Nuxt
+**/.nuxt/
+
+# ES6 module loader
+.esm-cache/
+
+# Nix operations
+result

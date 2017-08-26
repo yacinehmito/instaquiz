@@ -1,0 +1,30 @@
+{
+  "name": "instaquiz",
+  "version": "1.0.0-dev",
+  "description": "Realtime quiz app for the classroom",
+  "author": "Yacine Hmito <yacine.hmito@gmail.com>",
+  "private": true,
+  "workspaces": [
+    "nuxt",
+    "server"
+  ],
+  "scripts": {
+    "dev": "nodemon --inspect=localhost:5858 index.js -i nuxt/",
+    "dev-nuxt": "cd nuxt; nuxt dev -p 8080",
+    "build": "cd nuxt; nuxt build",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "instaquiz-nuxt": "=1.0.0-dev",
+    "instaquiz-server": "=1.0.0-dev"
+  },
+  "devDependencies": {
+    "eslint": "^4.5.0",
+    "eslint-config-prettier": "^2.3.0",
+    "eslint-plugin-html": "^3.2.0",
+    "eslint-plugin-prettier": "^2.2.0",
+    "lerna": "^2.1.0",
+    "nodemon": "^1.11.0",
+    "prettier": "^1.5.3"
+  }
+}

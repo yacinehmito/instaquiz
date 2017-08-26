@@ -1,0 +1,15 @@
+{
+  "name": "instaquiz-server",
+  "version": "1.0.0-dev",
+  "description": "Instaquiz backend app",
+  "author": "Yacine Hmito <yacine.hmito@gmail.com>",
+  "dependencies": {
+    "@std/esm": "^0.5.1",
+    "cors": "^2.8.4",
+    "express": "^4.15.4",
+    "morgan": "^1.8.2"
+  },
+  "@std/esm": {
+    "esm": "js"
+  }
+}

@@ -1,0 +1,24 @@
+module.exports = {
+  root: true,
+  extends: ['prettier'],
+  parserOptions: {
+    ecmaVersion: '2016',
+    sourceType: 'module'
+  },
+  env: {
+    node: true
+  },
+  plugins: ['prettier'],
+  rules: {
+    'prettier/prettier': [
+      'error',
+      {
+        singleQuote: true,
+        semi: false,
+        bracketSpacing: true
+      }
+    ],
+    'no-console': 0
+  },
+  globals: {}
+}
