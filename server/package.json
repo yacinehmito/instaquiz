@@ -7,6 +7,7 @@
     "@std/esm": "^0.5.1",
     "cors": "^2.8.4",
     "express": "^4.15.4",
+    "@yacinehmito/express-ws": "^4.0.0",
     "morgan": "^1.8.2"
   },
   "@std/esm": {
