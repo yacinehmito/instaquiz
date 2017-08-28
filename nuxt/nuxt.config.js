@@ -3,6 +3,8 @@ const path = require('path')
 module.exports = {
   modulesDir: path.join(__dirname, '..', 'node_modules'),
   modules: ['@nuxtjs/proxy', '@nuxtjs/axios'],
+  plugins: [{ src: '@/plugins/focus.js', ssr: false }],
+  css: ['normalize.css'],
   build: {
     // Run ESLint on Save
     extend(config, ctx) {

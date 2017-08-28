@@ -12,11 +12,29 @@ app.use(logger('dev'))
 
 app.use('/api', router)
 
-let counter = 0
+const rightAnswers = ['a', 'b']
+
+// Echo
 app.ws('/', (ws, req) => {
   ws.on('message', msg => {
-    ws.send(`Server's message n° ${counter}; Client's message n° ${msg}`)
-    counter++
+    const dataIn = JSON.parse(msg)
+    ws.send(
+      JSON.stringify({
+        type: 'echo',
+        payload: dataIn
+      })
+    )
+    if (dataIn.type === 'submit') {
+      const dataOut = {
+        type: 'result',
+        payload: {
+          success:
+            JSON.stringify(dataIn.payload) === JSON.stringify(rightAnswers), // Ugly hack for now
+          solution: rightAnswers
+        }
+      }
+      ws.send(JSON.stringify(dataOut))
+    }
   })
 })
 
